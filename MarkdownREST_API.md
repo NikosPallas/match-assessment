@@ -47,6 +47,37 @@ This project is a Spring Boot application that provides a REST API for managing 
    ```bash
    docker-compose up --build
 
-3. Swagger API can be reached through this http address to check the documentation in detail:
+### To test the endpoints of the application and check the documentation in detail(while it is running):
+    
+1. Swagger API can be reached through this http address (http://localhost:8080/swagger-ui/index.html#/):
    ```bash
-   http://localhost:8080/swagger-ui/index.html#/
+Swagger API: [here](http://localhost:8080/swagger-ui/index.html#/).
+
+2. Or simply through Postman API testing tool:
+ ```bash 
+    Example for POST request:
+POST http://localhost:8080/api/matches
+With Body: {
+   "description": "Serie A 2024 - Matchday 30",
+   "matchDate": "2024-04-10",
+   "matchTime": "18:30",
+   "teamA": "Inter Milan",
+   "teamB": "AS Roma",
+   "sport": "FOOTBALL",
+   "matchOdds": [
+   {
+   "specifier": "1x2",
+   "odd": 2.3
+   },
+   {
+   "specifier": "Over/Under 2.5",
+   "odd": 1.9
+   },
+   {
+   "specifier": "Exact Score",
+   "odd": 8.5
+   }
+   ]
+   }
+
+
